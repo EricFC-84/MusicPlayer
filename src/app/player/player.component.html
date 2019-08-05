@@ -18,11 +18,11 @@
 
         <p>{{_data.currentSong["year"]}}</p>
         <div class="row">            
-            <div [ngClass]='_data.currentSong["lyrics"]["translation"] == "" ? "col-12" : "col-lg-6 col-sm-12"'>
+            <div [ngClass]='_data.currentSong["lyrics"]["translation"] == "" ? "col-12" : "col-md-6 col-sm-12"'>
                     <h4>Original lyrics</h4>
                     <p class="lyrics">{{_data.currentSong["lyrics"]["original"]}}</p>
             </div>
-            <div class="col-lg-6 col-sm-12" *ngIf='_data.currentSong["lyrics"]["translation"] != ""'>
+            <div class="col-md-6 col-sm-12" *ngIf='_data.currentSong["lyrics"]["translation"] != ""'>
                     <h4>Translated lyrics</h4>
                     <p class="lyrics">{{_data.currentSong["lyrics"]["translation"]}}</p>
             </div>

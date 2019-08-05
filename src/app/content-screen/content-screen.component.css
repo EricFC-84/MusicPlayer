@@ -1,0 +1,42 @@
+/* .navbar {
+  background-color: rgb(30, 31, 38);
+  color: white;
+  margin: 0;
+}
+
+.navbar-btn {
+  background-color: rgba(50, 50, 50, 0.5);
+  color: white;
+}
+
+.navbar-btn:hover {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+
+.arrow {
+padding: 0 8px;
+display: inline;
+vertical-align: middle;
+
+}
+
+#searchInput{
+    border-radius: 20px;
+} */
+
+nav {
+    /* background-color: rgb(30, 31, 38); */
+    text-align: center;
+}
+
+nav li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 10px;    
+    margin: 10px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}

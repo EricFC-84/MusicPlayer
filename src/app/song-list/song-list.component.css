@@ -1,3 +1,6 @@
+#song-list-container{
+  min-height: 100vh;
+}
 
 .card-product .img-wrap {
     border-radius: 3px 3px 0 0;
@@ -12,12 +15,16 @@
     max-width: 100%;
     object-fit: cover;
     margin: 1em;
+    cursor: pointer;
+    width: 175px;
+    height: 175px;
+    overflow: hidden;
   }
   
   .card-product .info-wrap {
     overflow: hidden;
     padding: 15px;
-    border-top: 1px solid #eee;
+    /* border-top: 1px solid #eee; */
   }
   
   .card-product .bottom-wrap {
@@ -32,3 +39,13 @@
     vertical-align: middle;
   }
   
+  .title{
+    color: white;
+    font-weight: bolder;
+    margin-left: 25px;
+  }
+
+  .songTitle{
+    text-align: center;
+    color: white;
+  }
