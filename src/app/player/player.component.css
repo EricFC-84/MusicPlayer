@@ -1,0 +1,6 @@
+.lyrics {
+  white-space: pre-line;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+}

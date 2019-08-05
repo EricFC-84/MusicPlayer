@@ -1,0 +1,27 @@
+<!-- Fixed navbar -->
+
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <a class="navbar-brand" href="#" (click)="home()">My Music Player!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle navbar-btn ml-5" type="button" data-toggle="dropdown">Songs
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu bg-dark text-white ml-5">
+                    <!-- get songs from service -->
+                    <li *ngFor="let element of _data.arrSongs; let i = 'index'" class="ml-2">
+                        <!-- <p (click)="loadProd(element['id'])"> {{element["name"]}}</p> -->
+                        <p (click)="playSong(i)">{{element["title"]}}</p>
+
+                      </li>
+                </ul>
+              </div>
+      
+         
+        </div>
+      </nav>
+      

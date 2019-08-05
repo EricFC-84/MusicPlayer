@@ -1,0 +1,33 @@
+<div *ngIf="_data.currentView == 'song-list'">
+  <h1 class="mt-5">song-list!!!!</h1>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4" *ngFor="let element of _data.arrSongs; let i = 'index'">
+        <figure class="card card-product">
+          <div class="img-wrap"><img src="{{element['img']}}"></div>
+          <figcaption class="info-wrap">
+            <h4 class="title">{{element["title"]}}</h4>
+            <p class="author">{{element["author"]}}</p>
+            <p class="author">{{element["album"]}}</p>
+
+            <!-- <div class="rating-wrap">
+              <div class="label-rating">132 reviews</div>
+              <div class="label-rating">154 orders </div>
+            </div> rating-wrap.// -->
+          </figcaption>
+          <div class="bottom-wrap">
+            <!-- <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>  -->
+            <button class="btn btn-sm btn-primary float-right" (click)="playSong(i)">Play</button>
+            <!-- <div class="price-wrap h5">
+              <span class="price-new"> New price {{element["price"]}}{{element["unit"]}}</span> <br> <del
+                class="price-old">{{element["price"]*1.25}}{{element["unit"]}}</del>
+            </div> --> <!-- price-wrap.// -->
+          </div> <!-- bottom-wrap.// -->
+        </figure>
+      </div> <!-- col // -->
+
+
+    </div>
+  </div>
+</div>
