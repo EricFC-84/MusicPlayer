@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    height: 100vh;
+    height: fit-content;
     background-position: center;
     /* background-image: url("./assets/bg.jpg"); */
     background-color: hsl(0, 9%, 2%);

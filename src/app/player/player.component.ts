@@ -51,6 +51,11 @@ export class PlayerComponent implements OnInit {
     ( < HTMLAudioElement > document.querySelectorAll("audio")[0]).loop = !( < HTMLAudioElement > document.querySelectorAll("audio")[0]).loop;
 
   }
+
+  next():void{}
+  previous():void{}
+  shuffle():void{}
+
   songLength(): void {
 
     let time = this.formatTime(( < HTMLAudioElement > document.querySelectorAll("audio")[0]).duration);
