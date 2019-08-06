@@ -29,18 +29,18 @@ export class PlayerComponent implements OnInit {
 
     if (( < HTMLAudioElement > document.querySelectorAll("audio")[0]).paused == true) {
       ( < HTMLAudioElement > document.querySelectorAll("audio")[0]).play();
-      ( < HTMLImageElement > document.querySelectorAll("#playBtn")[0]).setAttribute("src", "../../assets/player/pause.png");
+      ( < HTMLImageElement > document.querySelectorAll("#playBtn")[0]).setAttribute("src", environment.imagenes_prefix + "assets/player/pause.png");
 
     } else {
       ( < HTMLAudioElement > document.querySelectorAll("audio")[0]).pause();
-      ( < HTMLImageElement > document.querySelectorAll("#playBtn")[0]).setAttribute("src", "../../assets/player/play-button.png");
+      ( < HTMLImageElement > document.querySelectorAll("#playBtn")[0]).setAttribute("src", environment.imagenes_prefix + "assets/player/play-button.png");
     }
     this.songLength();
   }
 
   stop(): void {
     ( < HTMLAudioElement > document.querySelectorAll("audio")[0]).load();
-    ( < HTMLImageElement > document.querySelectorAll("#playBtn")[0]).setAttribute("src", "../../assets/player/play-button.png");
+    ( < HTMLImageElement > document.querySelectorAll("#playBtn")[0]).setAttribute("src", environment.imagenes_prefix + "assets/player/play-button.png");
   }
 
   loop(): void {
