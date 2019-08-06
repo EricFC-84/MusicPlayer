@@ -82,6 +82,14 @@ export class PlayerComponent implements OnInit {
 
   constructor(public _data: SongDataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+
+  AfterViewChange(){
+    console.log("changes")
+    this.songLength();
+
+  }
 
 }
