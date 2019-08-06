@@ -28,15 +28,25 @@ nav {
     /* background-color: rgb(30, 31, 38); */
     text-align: center;
 }
+nav ul {
+  padding: 1em 0px;
+}
 
 nav li {
     text-decoration: none;
     display: inline-block;
-    padding: 2px 10px;    
+    padding: 1em 10px;    
     margin: 10px;
 }
 
 nav li a{
     text-decoration: none;
     color: white;
+}
+
+
+nav li:hover, nav li:active{
+  border-bottom:none;
+  background:linear-gradient(green,green) bottom /* left or right or else */ no-repeat;
+  background-size:50% 3px;
 }

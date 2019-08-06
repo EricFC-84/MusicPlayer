@@ -4,6 +4,25 @@
   <div class="container mt-5">
     <div class="row">
       <!-- <h2>{{_data.currentSong["title"]}}</h2> -->
+      <div class="col-12">
+        <img src="../../assets/player/shuffle.png" alt="" class="player-icon" (click)="shuffle()">
+
+        <img src="../../assets/player/previous.png" alt="" class="player-icon" (click)="previous()">
+
+        <img src="../../assets/player/play-button.png" alt="" class="player-icon" id="playBtn" (click)="play_pause()">
+
+        <img src="../../assets/player/stop.png" alt="" class="player-icon" (click)="stop()">
+
+        <img src="../../assets/player/next.png" alt="" class="player-icon" (click)="next()">
+
+        <img src="../../assets/player/repeat.png" alt="" class="player-icon" id="loopBtn" (click)="loop()">
+
+      </div>
+      <div class="col-12 justify-content-between">
+        <p class="songTiming">{{audioLength}}</p>
+
+      </div>
+
 
       <div class="col-md-4 col-sm-12 text-center">
         <audio controls class="audio-bg mt-5">
@@ -11,21 +30,22 @@
         </audio>
         <div><button class="btn btn-danger btn-back" (click)="back()">Back</button></div>
       </div>
+
       <div class="col-md-8 col-sm-12">
         <h4>{{_data.currentSong["title"]}}</h4>
         <h5>{{_data.currentSong["author"]}}</h5>
         <h5>{{_data.currentSong["album"]}}</h5>
 
         <p>{{_data.currentSong["year"]}}</p>
-        <div class="row">            
-            <div [ngClass]='_data.currentSong["lyrics"]["translation"] == "" ? "col-12" : "col-md-6 col-sm-12"'>
-                    <h4>Original lyrics</h4>
-                    <p class="lyrics">{{_data.currentSong["lyrics"]["original"]}}</p>
-            </div>
-            <div class="col-md-6 col-sm-12" *ngIf='_data.currentSong["lyrics"]["translation"] != ""'>
-                    <h4>Translated lyrics</h4>
-                    <p class="lyrics">{{_data.currentSong["lyrics"]["translation"]}}</p>
-            </div>
+        <div class="row">
+          <div [ngClass]='_data.currentSong["lyrics"]["translation"] == "" ? "col-12" : "col-md-6 col-sm-12"'>
+            <h4>Original lyrics</h4>
+            <p class="lyrics">{{_data.currentSong["lyrics"]["original"]}}</p>
+          </div>
+          <div class="col-md-6 col-sm-12" *ngIf='_data.currentSong["lyrics"]["translation"] != ""'>
+            <h4>Translated lyrics</h4>
+            <p class="lyrics">{{_data.currentSong["lyrics"]["translation"]}}</p>
+          </div>
         </div>
         <!-- <p style="width: 50%;white-space: pre-line">{{_data.currentSong["lyrics"]}}</p> -->
 
