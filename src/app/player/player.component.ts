@@ -8,6 +8,7 @@ import {
 import {
   stringify
 } from '@angular/compiler/src/util';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-player',
@@ -85,7 +86,16 @@ export class PlayerComponent implements OnInit {
     return minutesStr + ":" + secondsStr;
   }
 
-  constructor(public _data: SongDataService) {}
+  constructor(public _data: SongDataService) {
+
+    let playerButtons:NodeListOf<Element> = document.querySelectorAll(".player-icon");
+
+    for (let i = 0; i < playerButtons.length; i++) {
+      let src = playerButtons[i].getAttribute("src");
+      src = environment.imagenes_prefix + src;
+     playerButtons[i].setAttribute("src", src)      
+    }
+  }
 
   ngOnInit() {
 
